@@ -38,6 +38,12 @@ PikiwiDB 默认以 release 模式编译，不支持调试。如果需要调试�
 ./etc/script/build.sh --debug
 ```
 
+## 运行
+
+```bash
+bin/pikiwidb etc/conf/pikiwidb.conf
+```
+
 ## 与 Redis 完全兼容
 
 你可以用 Redis 的各种工具来测试 PikiwiDB，比如官方的 redis-cli, redis-benchmark。

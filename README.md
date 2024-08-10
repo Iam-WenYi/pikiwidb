@@ -38,6 +38,12 @@ Pikiwidb is compiled by default in release mode, which does not support debuggin
 ./etc/script/build.sh --debug
 ```
 
+## run
+
+```bash
+bin/pikiwidb etc/conf/pikiwidb.conf
+```
+
 ## Support module for write your own extensions
  PikiwiDB supports module now, still in progress, much work to do.
  I added three commands(ldel, skeys, hgets) for demonstration.
