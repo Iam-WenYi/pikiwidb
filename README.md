@@ -8,13 +8,13 @@ A C++20 implementation of Redis Server, use RocksDB for persist storage.(not inc
 
 * Linux or OS X or FreeBSD
 
-## compile
+## Compile
 
 **It is recommended to use the latest version of Ubuntu or Debian for Linux systems**
 
 Execute compilation
 
-Execute the following commands on CentOS:
+Execute the following commands on Rocky Linux:
 
 ```bash
 sudo dnf groupinstall -y 'Development Tools'
@@ -35,7 +35,7 @@ Pikiwidb is compiled by default in release mode, which does not support debuggin
 ./etc/script/build.sh --debug
 ```
 
-## run
+## Run
 
 ```bash
 bin/pikiwidb etc/conf/pikiwidb.conf

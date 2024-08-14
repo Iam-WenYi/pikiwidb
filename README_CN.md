@@ -14,6 +14,8 @@ C++20 实现的增强版 Redis 服务器,使用 RocksDB 作为持久化存储引
 
 执行编译:
 
+在 Rocky Linux 下执行如下的指令：
+
 ```bash
 sudo dnf groupinstall -y 'Development Tools'
 sudo dnf install cmake g++ autoconf perl -y
