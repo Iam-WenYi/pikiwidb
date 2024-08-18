@@ -12,8 +12,8 @@ ExternalProject_Add(
         ${EXTERNAL_PROJECT_LOG_ARGS}
         GIT_REPOSITORY https://github.com/facebook/rocksdb.git
         GIT_TAG v9.4.0
-          URL https://github.com/facebook/rocksdb/archive/refs/tags/v9.4.0.tar.gz
-          URL_HASH MD5=ce19cb3e2b6db927ef88cbf25c42097e
+        URL https://github.com/facebook/rocksdb/archive/refs/tags/v9.4.0.tar.gz
+        URL_HASH SHA256=1f829976aa24b8ba432e156f52c9e0f0bd89c46dc0cc5a9a628ea70571c1551c
         DOWNLOAD_NO_PROGRESS 1
         DEPENDS
         gflags

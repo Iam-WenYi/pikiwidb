@@ -19,6 +19,7 @@ SET(GFLAGS_INCLUDE_PATH "${LIB_INCLUDE_DIR}/gflags" CACHE PATH "gflags include d
 ExternalProject_Add(
         extern_gflags
         URL https://github.com/gflags/gflags/archive/v2.2.2.zip
+        URL_HASH SHA256=19713a36c9f32b33df59d1c79b4958434cb005b5b47dc5400a7a4b078111d9b5
         CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=${LIB_BUILD_TYPE}
         -DGFLAGS_BUILD_STATIC_LIBS=ON

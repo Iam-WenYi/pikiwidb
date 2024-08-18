@@ -18,6 +18,7 @@ ExternalProject_Add(
         ${EXTERNAL_PROJECT_LOG_ARGS}
         DEPENDS ssl crypto zlib protobuf leveldb gflags
         URL https://github.com/apache/brpc/archive/refs/tags/1.8.0.tar.gz
+        URL_HASH SHA256=13ffb2f1f57c679379a20367c744b3e597614a793ec036cd7580aae90798019d
         CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=${LIB_BUILD_TYPE}
         -DCMAKE_CPP_FLAGS=${CMAKE_CPP_FLAGS}
