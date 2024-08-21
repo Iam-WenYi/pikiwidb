@@ -350,7 +350,7 @@ class PConfig {
   }
 
   /*------------------------
-   * AddStrinWithFunc (const std::string& key, const CheckFunc& checkfunc, bool rewritable,
+   * AddStringWithFunc (const std::string& key, const CheckFunc& checkfunc, bool rewritable,
                                std::vector<AtomicString*> values_ptr_vector)
    * Introduce a new string key-value pair into the
    * configuration data layer, with a check function.
@@ -358,8 +358,8 @@ class PConfig {
    * The checkfunc is coded by the user, validate the string as needed,
    * and the return value should refer to rocksdb::Status.
    */
-  inline void AddStrinWithFunc(const std::string& key, const CheckFunc& checkfunc, bool rewritable,
-                               std::vector<AtomicString*> values_ptr_vector) {
+  inline void AddStringWithFunc(const std::string& key, const CheckFunc& checkfunc, bool rewritable,
+                                std::vector<AtomicString*> values_ptr_vector) {
     config_map_.emplace(key, std::make_unique<StringValue>(key, checkfunc, rewritable, values_ptr_vector));
   }
 
@@ -392,7 +392,7 @@ class PConfig {
   }
 
   /*------------------------
-   * AddNumberWihLimit (const std::string& key, bool rewritable, std::atomic<T>* value_ptr, T min, T max)
+   * AddNumberWithLimit (const std::string& key, bool rewritable, std::atomic<T>* value_ptr, T min, T max)
    * Introduce a new string key-value pair into the
    * configuration data layer, with a check function.
    * key is a string and value_ptr is a set of numbers.
@@ -403,7 +403,7 @@ class PConfig {
    * of the numbers passed in.
    */
   template <typename T>
-  inline void AddNumberWihLimit(const std::string& key, bool rewritable, std::atomic<T>* value_ptr, T min, T max) {
+  inline void AddNumberWithLimit(const std::string& key, bool rewritable, std::atomic<T>* value_ptr, T min, T max) {
     config_map_.emplace(key, std::make_unique<NumberValue<T>>(key, nullptr, rewritable, value_ptr, min, max));
   }
 
