@@ -127,7 +127,7 @@ bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
         break;
       }
       case 's': {
-        sscanf(optarg, "%s:%d", master_, &master_port_);
+        sscanf(optarg, "%s:%d", master_.c_str() &master_port_);
         break;
       }
       case '?': {
