@@ -1,8 +1,11 @@
 /*
+ * cmd_admin.h
+ *     Stores the declarations of management commands.
+ * 
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * 
+ * src/cmd_admin.h
+ * 
  */
 
 #pragma once
@@ -34,7 +37,7 @@ class CmdConfig : public BaseCmdGroup {
  private:
   //  std::vector<std::string> subCmd_;
 
-  void DoCmd(PClient* client) override{};
+  void DoCmd(PClient* client) override {};
 };
 
 class CmdConfigGet : public BaseCmd {
@@ -138,7 +141,7 @@ class CmdDebug : public BaseCmdGroup {
   bool DoInitial(PClient* client) override { return true; };
 
  private:
-  void DoCmd(PClient* client) override{};
+  void DoCmd(PClient* client) override {};
 };
 
 class CmdDebugHelp : public BaseCmd {

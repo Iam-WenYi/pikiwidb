@@ -1,8 +1,12 @@
 /*
+ * client.h
+ *    Defined a set of feedback codes, messages, and functions 
+ * related to handling client commands.
+ * 
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * 
+ * src/client.h
+ * 
  */
 
 #pragma once

@@ -1,8 +1,13 @@
 /*
+ * replication.h
+ *     Declared a set of functions related to the master-slave 
+ * replication mechanism, note that this is not driven by the 
+ * Raft protocol.
+ * 
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * 
+ * src/replication.cc
+ * 
  */
 
 #pragma once

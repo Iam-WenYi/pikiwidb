@@ -1,8 +1,12 @@
 /*
+ * cmd_kv.h
+ *     Defined a set of operation functions and commands related 
+ * to key-value pairs.
+ * 
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * 
+ * src/cmd_kv.h
+ * 
  */
 
 #pragma once

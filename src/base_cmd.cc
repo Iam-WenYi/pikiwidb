@@ -1,8 +1,12 @@
 /*
+ * base_cmd.cc
+ *     Built the foundational classes for the design and expansion 
+ * of commands.
+ * 
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * 
+ * src/base_cmd.cc
+ * 
  */
 
 #include "base_cmd.h"
@@ -113,4 +117,5 @@ bool BaseCmdGroup::DoInitial(PClient* client) {
   return true;
 }
 
-}  // namespace pikiwidb
+}
+/* namespace pikiwidb */

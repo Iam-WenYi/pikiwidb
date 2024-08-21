@@ -1,8 +1,11 @@
 /*
+ * cmd_table_manager.cc
+ *     Defined a command table for managing the commands themselves.
+ * 
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * 
+ * src/cmd_table_manager.cc
+ * 
  */
 
 #include "cmd_table_manager.h"

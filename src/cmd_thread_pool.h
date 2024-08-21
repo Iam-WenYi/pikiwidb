@@ -1,8 +1,11 @@
 /*
+ * cmd_thread_pool.h
+ *     A thread pool for managing commands has been defined here.
+ * 
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * 
+ * src/cmd_thread_pool.cc
+ * 
  */
 
 #pragma once
@@ -21,6 +24,9 @@ namespace pikiwidb {
 // task interface
 // inherit this class and implement the Run method
 // then submit the task to the thread pool
+/*
+  CmdThreadPoolTask
+*/
 class CmdThreadPoolTask {
  public:
   explicit CmdThreadPoolTask(std::shared_ptr<PClient> client) : client_(std::move(client)) {}
@@ -50,25 +56,25 @@ class CmdThreadPool {
 
   pstd::Status Init(int fast_thread, int slow_thread, std::string name);
 
-  // start the thread pool
+  /* start the thread pool */
   void Start();
 
-  // stop the thread pool
+  /* stop the thread pool */
   void Stop();
 
-  // submit a fast task to the thread pool
+  /* submit a fast task to the thread pool */
   void SubmitFast(const std::shared_ptr<CmdThreadPoolTask> &runner);
 
-  // submit a slow task to the thread pool
+  /* submit a slow task to the thread pool */
   void SubmitSlow(const std::shared_ptr<CmdThreadPoolTask> &runner);
 
-  // get the fast thread num
+  /* get the fast thread num */
   inline int FastThreadNum() const { return fast_thread_num_; };
 
-  // get the slow thread num
+  /* get the slow thread num */
   inline int SlowThreadNum() const { return slow_thread_num_; };
 
-  // get the thread pool size
+  /* get the thread pool size */
   inline int ThreadPollSize() const { return fast_thread_num_ + slow_thread_num_; };
 
   ~CmdThreadPool();
