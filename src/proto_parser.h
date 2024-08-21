@@ -1,12 +1,12 @@
 /*
  * proto_parser.h
- *     Responsible for declaring functions and instructions for 
+ *     Responsible for declaring functions and instructions for
  * handling the Redis client protocol.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/proto_parser.cc
- * 
+ *
  */
 
 #pragma once

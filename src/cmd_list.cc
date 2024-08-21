@@ -1,12 +1,12 @@
 /*
  * cmd_list.cc
- *     Implemented a set of operation functions and commands related 
+ *     Implemented a set of operation functions and commands related
  * to lists.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_list.cc
- * 
+ *
  */
 
 #include "cmd_list.h"

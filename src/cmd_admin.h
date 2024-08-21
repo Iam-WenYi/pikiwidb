@@ -1,11 +1,11 @@
 /*
  * cmd_admin.h
  *     Stores the declarations of management commands.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_admin.h
- * 
+ *
  */
 
 #pragma once

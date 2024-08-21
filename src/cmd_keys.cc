@@ -1,12 +1,12 @@
 /*
  * cmd_keys.cc
- *     This file implements commands that focus on the keys in 
+ *     This file implements commands that focus on the keys in
  * key-value pairs, rather than the values.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_keys.cc
- * 
+ *
  */
 
 #include "cmd_keys.h"

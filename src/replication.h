@@ -1,13 +1,13 @@
 /*
  * replication.h
- *     Declared a set of functions related to the master-slave 
- * replication mechanism, note that this is not driven by the 
+ *     Declared a set of functions related to the master-slave
+ * replication mechanism, note that this is not driven by the
  * Raft protocol.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/replication.cc
- * 
+ *
  */
 
 #pragma once

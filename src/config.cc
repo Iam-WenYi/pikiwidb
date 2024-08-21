@@ -1,12 +1,12 @@
 /*
  * config.cc
- *     Responsible for managing the runtime configuration information 
+ *     Responsible for managing the runtime configuration information
  * of PikiwiDB.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/config.cc
- * 
+ *
  */
 
 #include <string>

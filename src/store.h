@@ -2,11 +2,11 @@
  * store.h
  *     Connects external commands and coordinates the operation
  * of RocksDB.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/store.h
- * 
+ *
  */
 
 #pragma once

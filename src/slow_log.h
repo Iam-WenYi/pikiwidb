@@ -1,11 +1,11 @@
 /*
  * slow_log.h
  *     Declared a set of features related to the slow log.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/slow_log.h
- * 
+ *
  */
 
 #pragma once

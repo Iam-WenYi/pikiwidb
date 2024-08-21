@@ -1,11 +1,11 @@
 /*
  * cmd_table_manager.cc
  *     Defined a command table for managing the commands themselves.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_table_manager.cc
- * 
+ *
  */
 
 #include "cmd_table_manager.h"

@@ -2,11 +2,11 @@
  * base_cmd.h
  *    Defined the open commands of PikiwiDB to the outside, the setting of
  * permissions, and other aspects.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
  *
  * src/base_cmd.h
- * 
+ *
  */
 
 #pragma once

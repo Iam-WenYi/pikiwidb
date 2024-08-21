@@ -1,12 +1,12 @@
 /*
  * cmd_hash.cc
- *     Defined a set of functions for operating key-value pairs 
+ *     Defined a set of functions for operating key-value pairs
  * in a hash table.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_hash.cc
- * 
+ *
  */
 #include "cmd_hash.h"
 

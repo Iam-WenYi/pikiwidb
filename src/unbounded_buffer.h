@@ -2,11 +2,11 @@
  * unbounded_buffer.h
  *     The definition part of the module that supports dynamically
  *  expandable buffer.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/unbounded_buffer.h
- * 
+ *
  */
 
 #pragma once

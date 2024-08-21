@@ -1,11 +1,11 @@
 /*
  * cmd_thread_pool.h
  *     A thread pool for managing commands has been defined here.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_thread_pool.cc
- * 
+ *
  */
 
 #pragma once

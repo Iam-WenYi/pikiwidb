@@ -1,12 +1,12 @@
 /*
  * store.cc
- *     Implemented a set of functions and instructions for 
+ *     Implemented a set of functions and instructions for
  * coordinating external commands and interfacing with RocksDB.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/store.cc
- * 
+ *
  */
 
 #include "store.h"

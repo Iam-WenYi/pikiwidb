@@ -1,11 +1,11 @@
 /*
  * helper.cc
  *     Defined a set of helper functions.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/helper.cc
- * 
+ *
  */
 
 #include <string.h>

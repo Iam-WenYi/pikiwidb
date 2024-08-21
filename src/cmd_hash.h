@@ -1,13 +1,13 @@
 /*
  * cmd_hash.h
- *     Declared a set of functions for operating key-value pairs 
+ *     Declared a set of functions for operating key-value pairs
  * in a hash table, which can be understood with reference to the
  * principles of Redis HSET and other commands.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_hash.h
- * 
+ *
  */
 
 #pragma once

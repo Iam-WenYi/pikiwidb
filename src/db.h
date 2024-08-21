@@ -1,12 +1,12 @@
 /*
  * db.h
- *     Declared a set of functions responsible for interfacing 
+ *     Declared a set of functions responsible for interfacing
  * with RocksDB.
- * 
+ *
  * Copyright (c) 2024-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/db.cc
- * 
+ *
  */
 
 #pragma once

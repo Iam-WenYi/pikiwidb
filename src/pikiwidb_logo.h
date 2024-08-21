@@ -1,13 +1,13 @@
 /*
  * pikiwidb_logo.h
- *     Responsible for defining the text form of the PikiwiDB logo, 
- * the output of this LOGO must be combined with the definition 
+ *     Responsible for defining the text form of the PikiwiDB logo,
+ * the output of this LOGO must be combined with the definition
  * in practice.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/pikiwidb_logo.h
- * 
+ *
  */
 
 #pragma once

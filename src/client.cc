@@ -1,11 +1,11 @@
 /*
  * client.cc
  *     Implemented a set of functions for interfacing with the client.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/client.cc
- * 
+ *
  */
 
 #include "client.h"

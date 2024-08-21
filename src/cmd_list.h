@@ -1,11 +1,11 @@
 /*
  * cmd_list.h
  *     Defined a set of operation functions and commands related to lists.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_list.h
- * 
+ *
  */
 
 #pragma once

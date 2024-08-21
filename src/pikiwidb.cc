@@ -79,12 +79,9 @@ static void Usage() {
 /* Handle the argc & argv */
 bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
   static struct option long_options[] = {
-      {"config", required_argument, 0, 'c'},   
-      {"version", no_argument, 0, 'v'},
-      {"help", no_argument, 0, 'h'},           
-      {"port", required_argument, 0, 'p'},
-      {"loglevel", required_argument, 0, 'l'}, 
-      {"slaveof", required_argument, 0, 's'},
+      {"config", required_argument, 0, 'c'},   {"version", no_argument, 0, 'v'},
+      {"help", no_argument, 0, 'h'},           {"port", required_argument, 0, 'p'},
+      {"loglevel", required_argument, 0, 'l'}, {"slaveof", required_argument, 0, 's'},
   };
   while (1) {
     int this_option_optind = optind ? optind : 1;

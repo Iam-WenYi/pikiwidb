@@ -1,11 +1,11 @@
 /*
  * cmd_set.cc
  *     A set of instructions and functions related to set operations.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_set.cc
- * 
+ *
  */
 
 #include "cmd_set.h"

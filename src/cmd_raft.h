@@ -1,12 +1,12 @@
 /*
  * cmd_raft.h
- *     The declarations of a set of instructions and functions 
+ *     The declarations of a set of instructions and functions
  * related to Raft are written here.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_raft.h
- * 
+ *
  */
 
 #pragma once

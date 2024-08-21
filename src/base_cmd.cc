@@ -1,12 +1,12 @@
 /*
  * base_cmd.cc
- *     Built the foundational classes for the design and expansion 
+ *     Built the foundational classes for the design and expansion
  * of commands.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/base_cmd.cc
- * 
+ *
  */
 
 #include "base_cmd.h"
@@ -117,5 +117,5 @@ bool BaseCmdGroup::DoInitial(PClient* client) {
   return true;
 }
 
-}
+}  // namespace pikiwidb
 /* namespace pikiwidb */

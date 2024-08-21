@@ -1,12 +1,12 @@
 /*
  * cmd_kv.cc
- *     Implemented a set of operation functions and commands 
+ *     Implemented a set of operation functions and commands
  * associated with key-value pairs.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_kv.cc
- * 
+ *
  */
 
 #include "cmd_kv.h"

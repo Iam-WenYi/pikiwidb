@@ -2,11 +2,11 @@
  * replication.cc
  *     Defined a set of functions associated with the master-slave
  *  replication mechanism.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/replication.cc
- * 
+ *
  */
 
 #include <iostream>  // the child process use stdout for log

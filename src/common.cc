@@ -1,11 +1,11 @@
 /*
  * common.cc
  *    A set of general functions designed for other modules of PikiwiDB.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/common.cc
- * 
+ *
  */
 
 #include "common.h"

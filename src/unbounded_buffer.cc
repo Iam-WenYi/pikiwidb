@@ -1,11 +1,11 @@
 /*
  * unbounded_buffer.cc
  *     Implemented a dynamically expandable buffer.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/unbounded_buffer.cc
- * 
+ *
  */
 
 #include "unbounded_buffer.h"

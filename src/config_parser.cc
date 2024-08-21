@@ -1,11 +1,11 @@
 /*
  * config_parser.cc
  *     Responsible for parsing configuration data as required.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/config_parser.cc
- * 
+ *
  */
 
 #include "config_parser.h"

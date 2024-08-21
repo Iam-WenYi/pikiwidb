@@ -1,12 +1,12 @@
 /*
  * cmd_keys.h
- *     This file defines some functions and commands related 
+ *     This file defines some functions and commands related
  * to key operations.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_keys.h
- * 
+ *
  */
 
 #pragma once

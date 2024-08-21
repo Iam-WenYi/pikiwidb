@@ -1,12 +1,12 @@
 /*
  * db.cc
- *     Responsible for interfacing with RocksDB to effectively 
+ *     Responsible for interfacing with RocksDB to effectively
  * manage PikiwiDB's data.
- * 
+ *
  * Copyright (c) 2024-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/db.cc
- * 
+ *
  */
 
 #include "db.h"

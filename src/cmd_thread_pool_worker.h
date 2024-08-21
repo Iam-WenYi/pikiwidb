@@ -1,12 +1,12 @@
 /*
  * cmd_thread_pool_worker.h
- *     Defined a set of functions for retrieving commands from 
+ *     Defined a set of functions for retrieving commands from
  * the thread pool and executing them.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_thread_pool_worker.h
- * 
+ *
  */
 
 #pragma once

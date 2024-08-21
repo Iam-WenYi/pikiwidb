@@ -1,12 +1,12 @@
 /*
  * client.h
- *    Defined a set of feedback codes, messages, and functions 
+ *    Defined a set of feedback codes, messages, and functions
  * related to handling client commands.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/client.h
- * 
+ *
  */
 
 #pragma once

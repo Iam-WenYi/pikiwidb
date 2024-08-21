@@ -1,12 +1,12 @@
 /*
  * pubsub.h
- *     Defined a set of functions related to the client's 
+ *     Defined a set of functions related to the client's
  * subscription mechanism.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/pubsub.h
- * 
+ *
  */
 
 #pragma once

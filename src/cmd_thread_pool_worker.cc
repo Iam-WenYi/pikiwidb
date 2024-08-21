@@ -1,11 +1,11 @@
 /*
  * cmd_thread_pool_worker.cc
  *     Retrieve commands from the thread pool and execute them.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_thread_pool_worker.cc
- * 
+ *
  */
 
 #include "cmd_thread_pool_worker.h"

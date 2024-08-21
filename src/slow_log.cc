@@ -1,13 +1,13 @@
 /*
  * slow_log.cc
  *     Implement the slow log feature.
- *     The slow log is responsible for recording commands that exceed 
+ *     The slow log is responsible for recording commands that exceed
  * the threshold time.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/slow_log.cc
- * 
+ *
  */
 
 #include <sys/time.h>

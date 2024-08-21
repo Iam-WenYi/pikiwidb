@@ -1,11 +1,11 @@
 /*
  * pubsub.cc
  *     Implement the client's subscription mechanism.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/pubsub.cc
- * 
+ *
  */
 
 #include <fnmatch.h>

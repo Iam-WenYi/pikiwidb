@@ -1,12 +1,12 @@
 /*
  * cmd_kv.h
- *     Defined a set of operation functions and commands related 
+ *     Defined a set of operation functions and commands related
  * to key-value pairs.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_kv.h
- * 
+ *
  */
 
 #pragma once

@@ -1,12 +1,12 @@
 /*
  * config.h
- *     Declared a set of functions responsible for managing the 
+ *     Declared a set of functions responsible for managing the
  * runtime configuration information of PikiwiDB.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/config.h
- * 
+ *
  */
 
 #pragma once
@@ -167,6 +167,7 @@ class PConfig {
    * some parameters are not allowed to be modified outside of the initialization phase
    */
   Status Set(std::string key, const std::string& value, bool init_stage = false);
+
  public:
   /*
    * Some crucial, globally significant, externally accessible public data.
@@ -334,27 +335,27 @@ class PConfig {
 
  private:
   /* Some functions and variables set up for internal work. */
-  
+
   /*------------------------
    * AddString (const std::string& key, bool rewritable, * std::vector<AtomicString*> values_ptr_vector)
-   * Introduce a new string key-value pair into the 
+   * Introduce a new string key-value pair into the
    * configuration data layer.
-   * A key may correspond to multiple values, so we use std::vector 
+   * A key may correspond to multiple values, so we use std::vector
    * to store the data.
-   * rewritable represents whether to overwrite existing settings 
+   * rewritable represents whether to overwrite existing settings
    * when a key-value pair is duplicated.
    */
   inline void AddString(const std::string& key, bool rewritable, std::vector<AtomicString*> values_ptr_vector) {
     config_map_.emplace(key, std::make_unique<StringValue>(key, nullptr, rewritable, values_ptr_vector));
   }
-  
+
   /*------------------------
    * AddStrinWithFunc (const std::string& key, const CheckFunc& checkfunc, bool rewritable,
                                std::vector<AtomicString*> values_ptr_vector)
-   * Introduce a new string key-value pair into the 
+   * Introduce a new string key-value pair into the
    * configuration data layer, with a check function.
    * key, value, rewritable is the same as AddString.
-   * The checkfunc is coded by the user, validate the string as needed, 
+   * The checkfunc is coded by the user, validate the string as needed,
    * and the return value should refer to rocksdb::Status.
    */
   inline void AddStrinWithFunc(const std::string& key, const CheckFunc& checkfunc, bool rewritable,
@@ -365,24 +366,24 @@ class PConfig {
   /*------------------------
    * AddBool (const std::string& key, const CheckFunc& checkfunc, bool rewritable,
                       std::atomic<bool>* value_ptr)
-   * Introduce a new string key-value pair into the 
+   * Introduce a new string key-value pair into the
    * configuration data layer, with a check function.
    * key is a string and value_ptr is a point to a bool value.
    * checkfunc is the same as AddStrinWithFunc.
-   * rewritable represents whether to overwrite existing settings 
+   * rewritable represents whether to overwrite existing settings
    * when a key-value pair is duplicated.
    */
   inline void AddBool(const std::string& key, const CheckFunc& checkfunc, bool rewritable,
                       std::atomic<bool>* value_ptr) {
     config_map_.emplace(key, std::make_unique<BoolValue>(key, checkfunc, rewritable, value_ptr));
   }
-  
+
   /*------------------------
    * AddNumber (const std::string& key, bool rewritable, std::atomic<T>* value_ptr)
-   * Introduce a new string key-value pair into the 
+   * Introduce a new string key-value pair into the
    * configuration data layer, with a check function.
    * key is a string and value_ptr is a set of numbers.
-   * rewritable represents whether to overwrite existing settings 
+   * rewritable represents whether to overwrite existing settings
    * when a key-value pair is duplicated.
    */
   template <typename T>
@@ -392,13 +393,13 @@ class PConfig {
 
   /*------------------------
    * AddNumberWihLimit (const std::string& key, bool rewritable, std::atomic<T>* value_ptr, T min, T max)
-   * Introduce a new string key-value pair into the 
+   * Introduce a new string key-value pair into the
    * configuration data layer, with a check function.
    * key is a string and value_ptr is a set of numbers.
-   * rewritable represents whether to overwrite existing settings 
+   * rewritable represents whether to overwrite existing settings
    * when a key-value pair is duplicated.
-   * Please note that this function does not have a checkfunc function, 
-   * as we have replaced it with the upper and lower limits 
+   * Please note that this function does not have a checkfunc function,
+   * as we have replaced it with the upper and lower limits
    * of the numbers passed in.
    */
   template <typename T>
@@ -407,7 +408,6 @@ class PConfig {
   }
 
  private:
-  
   /* The parser to parse the config data */
   ConfigParser parser_;
 
@@ -417,5 +417,5 @@ class PConfig {
   /* The file name of the config */
   std::string config_file_name_;
 };
-}  
+}  // namespace pikiwidb
 /* namespace pikiwidb */

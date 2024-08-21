@@ -1,12 +1,12 @@
 /*
  * common.h
- *    A set of general functions defined here may be utilized by 
+ *    A set of general functions defined here may be utilized by
  * other modules.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/common.h
- * 
+ *
  */
 
 #pragma once
@@ -182,9 +182,9 @@ class AtomicString {
   }
 
  private:
-  /* 
-   * Mutex established to achieve atomicity 
-   * of read and write operations 
+  /*
+   * Mutex established to achieve atomicity
+   * of read and write operations
    */
   mutable std::shared_mutex mutex_;
   /* Store the string */

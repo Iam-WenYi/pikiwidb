@@ -1,15 +1,15 @@
 /*
  * cmd_raft.cc
  *     A set of instructions and functions related to Raft.
- * 
+ *
  * Defined a set of functions and instructions related to the
  * implementation of Raft, which is key to the distributed cluster
  * implementation of PikiwiDB.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_raft.cc
- * 
+ *
  */
 
 #include "cmd_raft.h"

@@ -1,11 +1,11 @@
 /*
  * cmd_zset.h
  *     Defined a set of features related to sorted sets.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/cmd_zset.cc
- * 
+ *
  */
 
 #pragma once

@@ -1,12 +1,12 @@
 /*
  * pikiwidb.h
- *     Designed a set of functions and variables associated with 
+ *     Designed a set of functions and variables associated with
  * the PikiwiDB server.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/pikiwidb.h
- * 
+ *
  */
 
 #include "cmd_table_manager.h"

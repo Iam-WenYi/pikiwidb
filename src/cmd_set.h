@@ -1,12 +1,12 @@
 /*
  * cmd_set.h
- *     Declarations of a set of instructions and functions related 
+ *     Declarations of a set of instructions and functions related
  * to set operations.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
  *
  * src/cmd_set.h
- * 
+ *
  */
 
 #pragma once

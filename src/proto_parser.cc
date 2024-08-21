@@ -1,11 +1,11 @@
 /*
  * proto_parser.cc
  *     Responsible for interfacing with the Redis client protocol.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/proto_parser.cc
- * 
+ *
  */
 
 #include <cassert>

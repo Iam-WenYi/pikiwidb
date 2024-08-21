@@ -1,11 +1,11 @@
 /*
  * helper.cc
  *     Declared a set of auxiliary functions.
- * 
+ *
  * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- * 
+ *
  * src/helper.cc
- * 
+ *
  */
 
 #pragma once
