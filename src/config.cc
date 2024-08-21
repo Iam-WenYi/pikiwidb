@@ -114,7 +114,7 @@ PConfig::PConfig() {
   AddString("db-path", false, {&db_path});
   AddStringWithFunc("loglevel", &CheckLogLevel, false, {&log_level});
   AddString("logfile", false, {&log_dir});
-  AddNumberWihLimit<size_t>("databases", false, &databases, 1, DBNUMBER_MAX);
+  AddNumberWithLimit<size_t>("databases", false, &databases, 1, DBNUMBER_MAX);
   AddString("requirepass", true, {&password});
   AddNumber("maxclients", true, &max_clients);
   AddNumberWithLimit<uint32_t>("worker-threads", false, &worker_threads_num, 1, THREAD_MAX);
@@ -122,7 +122,7 @@ PConfig::PConfig() {
   AddNumber("slowlog-log-slower-than", true, &slow_log_time);
   AddNumber("slowlog-max-len", true, &slow_log_max_len);
   AddNumberWithLimit<size_t>("db-instance-num", true, &db_instance_num, 1, ROCKSDB_INSTANCE_NUMBER_MAX);
-  AddNumberWihtLimit<int32_t>("fast-cmd-threads-num", false, &fast_cmd_threads_num, 1, THREAD_MAX);
+  AddNumberWithtLimit<int32_t>("fast-cmd-threads-num", false, &fast_cmd_threads_num, 1, THREAD_MAX);
   AddNumberWithLimit<int32_t>("slow-cmd-threads-num", false, &slow_cmd_threads_num, 1, THREAD_MAX);
   AddNumber("max-client-response-size", true, &max_client_response_size);
   AddString("runid", false, {&run_id});
