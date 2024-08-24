@@ -4,8 +4,8 @@
 // of patent rights can be found in the PATENTS file in the same directory
 
 /*
-    Responsible for defining the text form of the PikiwiDB logo, 
-    the output of this LOGO must be combined with the definition 
+    Responsible for defining the text form of the PikiwiDB logo,
+    the output of this LOGO must be combined with the definition
     in practice.
  */
 

@@ -5,7 +5,7 @@
 
 /*
   Implement the slow log feature.
-  
+
   The slow log is responsible for recording commands that exceed the threshold time.
  */
 

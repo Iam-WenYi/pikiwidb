@@ -9,7 +9,7 @@
    Compared to the external commands at the user level,
    the commands defined here are more focused on the overall
    management of the PikiwiDB.
- 
+
  */
 
 #include "cmd_admin.h"

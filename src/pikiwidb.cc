@@ -6,7 +6,8 @@
 /*
   Stub main() routine for the pikiwidb executable.
 
-  This does some essential startup tasks for pikiwidb, and then dispatches to the proper FooMain() routine for the incarnation.
+  This does some essential startup tasks for pikiwidb, and then dispatches to the proper FooMain() routine for the
+  incarnation.
  */
 
 #include "pikiwidb.h"
