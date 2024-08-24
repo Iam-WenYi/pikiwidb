@@ -104,8 +104,7 @@ class EventServer final {
 };
 
 template <typename T>
-requires HasSetFdFunction<T>
-std::pair<bool, std::string> EventServer<T>::StartServer(int64_t interval) {
+requires HasSetFdFunction<T> std::pair<bool, std::string> EventServer<T>::StartServer(int64_t interval) {
   if (threadNum_ <= 0) {
     return std::pair(false, "thread num must be greater than 0");
   }
@@ -144,8 +143,7 @@ std::pair<bool, std::string> EventServer<T>::StartServer(int64_t interval) {
 }
 
 template <typename T>
-requires HasSetFdFunction<T>
-std::pair<bool, std::string> EventServer<T>::StartClientServer() {
+requires HasSetFdFunction<T> std::pair<bool, std::string> EventServer<T>::StartClientServer() {
   if (threadNum_ <= 0) {
     return std::pair(false, "thread num must be greater than 0");
   }
@@ -190,8 +188,9 @@ void EventServer<T>::StopServer() {
   cv_.notify_one();
 }
 
-template <typename T> 
-requires HasSetFdFunction<T> void EventServer<T>::SendPacket(const T &conn, std::string &&msg) {
+template <typename T>
+requires HasSetFdFunction<T>
+void EventServer<T>::SendPacket(const T &conn, std::string &&msg) {
   int thIndex;
   if constexpr (IsPointer_v<T>) {
     thIndex = conn->GetThreadIndex();
