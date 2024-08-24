@@ -1,12 +1,11 @@
+// Copyright (c) 2023-present, OpenAtom Foundation, Inc.  All rights reserved.
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. An additional grant
+// of patent rights can be found in the PATENTS file in the same directory
+
 /*
- * proto_parser.h
- *     Responsible for declaring functions and instructions for
- * handling the Redis client protocol.
- *
- * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- *
- * src/proto_parser.cc
- *
+  Responsible for declaring functions and instructions for
+  handling the Redis client protocol.
  */
 
 #pragma once

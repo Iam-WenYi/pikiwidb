@@ -1,12 +1,11 @@
+// Copyright (c) 2023-present, OpenAtom Foundation, Inc.  All rights reserved.
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. An additional grant
+// of patent rights can be found in the PATENTS file in the same directory
+
 /*
- * pikiwidb.h
- *     Designed a set of functions and variables associated with
- * the PikiwiDB server.
- *
- * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- *
- * src/pikiwidb.h
- *
+  Designed a set of functions and variables associated with
+  the PikiwiDB server.
  */
 
 #include "cmd_table_manager.h"

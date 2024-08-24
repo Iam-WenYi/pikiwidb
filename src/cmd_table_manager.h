@@ -1,12 +1,11 @@
+// Copyright (c) 2023-present, OpenAtom Foundation, Inc.  All rights reserved.
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. An additional grant
+// of patent rights can be found in the PATENTS file in the same directory
+
 /*
- * cmd_table_manager.h
- *     Defined a command table, because PikiwiDB needs to manage
- * commands in an integrated way.
- *
- * Copyright (c) 2023-present, Qihoo, Inc.  All rights reserved.
- *
- * src/cmd_table_manager.h
- *
+  Defined a command table, because PikiwiDB needs to manage
+  commands in an integrated way.
  */
 
 #pragma once
