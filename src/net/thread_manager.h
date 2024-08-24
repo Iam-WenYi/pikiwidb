@@ -327,7 +327,7 @@ bool ThreadManager<T>::CreateWriteThread() {
 
 template <typename T>
 requires HasSetFdFunction<T> uint64_t ThreadManager<T>::DoTCPConnect(T &t, int fd, 
-                                                                    const std::shared_ptr<Connection> &conn) {
+                                                                     const std::shared_ptr<Connection> &conn) {
   auto connId = getConnId();
   if constexpr (IsPointer_v<T>) {
     t->SetConnId(connId);
