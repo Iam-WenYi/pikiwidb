@@ -36,7 +36,7 @@ class CmdConfig : public BaseCmdGroup {
  private:
   //  std::vector<std::string> subCmd_;
 
-  void DoCmd(PClient* client) override {};
+  void DoCmd(PClient* client) override{};
 };
 
 class CmdConfigGet : public BaseCmd {
@@ -140,7 +140,7 @@ class CmdDebug : public BaseCmdGroup {
   bool DoInitial(PClient* client) override { return true; };
 
  private:
-  void DoCmd(PClient* client) override {};
+  void DoCmd(PClient* client) override{};
 };
 
 class CmdDebugHelp : public BaseCmd {

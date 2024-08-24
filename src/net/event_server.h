@@ -190,9 +190,8 @@ void EventServer<T>::StopServer() {
   cv_.notify_one();
 }
 
-template <typename T>
-requires HasSetFdFunction<T>
-void EventServer<T>::SendPacket(const T &conn, std::string &&msg) {
+template <typename T> 
+requires HasSetFdFunction<T> void EventServer<T>::SendPacket(const T &conn, std::string &&msg) {
   int thIndex;
   if constexpr (IsPointer_v<T>) {
     thIndex = conn->GetThreadIndex();
