@@ -127,15 +127,12 @@ bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
       }
       case 's': {
         unsigned int optarg_long = strlen(optarg);
-        char *str = calloc(optarg_long, sizeof(char*));
-        if (str)
-        {
+        char* str = calloc(optarg_long, sizeof(char*));
+        if (str) {
           sscanf(optarg, "%s:%d", str, master_port_);
           master_ = str;
           free(str);
-        }
-        else
-        {
+        } else {
           ERROR("Memory alloc failed.");
         }
         break;
