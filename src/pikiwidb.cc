@@ -276,11 +276,11 @@ static int InitLimit() {
 
 static void daemonize() {
   if (fork()) {
-  // parent exits
-    exit(0); 
+    // parent exits
+    exit(0);
   }
   // create a new session
-  setsid(); 
+  setsid();
 }
 
 static void closeStd() {
