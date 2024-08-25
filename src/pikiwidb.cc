@@ -87,57 +87,58 @@ bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
     cfg_file_ = argv[1];
     argc = argc - 1;
     argv = argv + 1;
-    while (1) {
-      int this_option_optind = optind ? optind : 1;
-      int option_index = 0;
-      int c;
-      c = getopt_long(argc, argv, "vhp:l:s:", long_options, &option_index);
-      if (c == -1) {
-        break;
-      }
+  }
+  while (1) {
+    int this_option_optind = optind ? optind : 1;
+    int option_index = 0;
+    int c;
+    c = getopt_long(argc, argv, "vhp:l:s:", long_options, &option_index);
+    if (c == -1) {
+      break;
+    }
 
-      switch (c) {
-        case 'v': {
-          std::cerr << "PikiwiDB Server version: " << KPIKIWIDB_VERSION << " bits=" << (sizeof(void*) == 8 ? 64 : 32)
-                    << std::endl;
-          std::cerr << "PikiwiDB Server Build Type: " << KPIKIWIDB_BUILD_TYPE << std::endl;
+    switch (c) {
+      case 'v': {
+        std::cerr << "PikiwiDB Server version: " << KPIKIWIDB_VERSION << " bits=" << (sizeof(void*) == 8 ? 64 : 32)
+                  << std::endl;
+        std::cerr << "PikiwiDB Server Build Type: " << KPIKIWIDB_BUILD_TYPE << std::endl;
 #if defined(KPIKIWIDB_BUILD_DATE)
-          std::cerr << "PikiwiDB Server Build Date: " << KPIKIWIDB_BUILD_DATE << std::endl;
+        std::cerr << "PikiwiDB Server Build Date: " << KPIKIWIDB_BUILD_DATE << std::endl;
 #endif
 #if defined(KPIKIWIDB_GIT_COMMIT_ID)
-          std::cerr << "PikiwiDB Server Build GIT SHA: " << KPIKIWIDB_GIT_COMMIT_ID << std::endl;
+        std::cerr << "PikiwiDB Server Build GIT SHA: " << KPIKIWIDB_GIT_COMMIT_ID << std::endl;
 #endif
 
-          exit(0);
-          break;
-        }
-        case 'h': {
-          Usage();
-          exit(0);
-          break;
-        }
-        case 'p': {
-          port_ = static_cast<uint16_t>(std::atoi(optarg));
-          break;
-        }
-        case 'l': {
-          log_level_ = std::string(optarg);
-          break;
-        }
-        case 's': {
-          master_.resize(strlen(optarg));
-          sscanf(optarg, "%s:%d", master_.c_str(), master_port_);
-          break;
-        }
-        case '?': {
-          std::cerr << "Unknow option " << std::endl;
-          return false;
-          break;
-        }
+        exit(0);
+        break;
+      }
+      case 'h': {
+        Usage();
+        exit(0);
+        break;
+      }
+      case 'p': {
+        port_ = static_cast<uint16_t>(std::atoi(optarg));
+        break;
+      }
+      case 'l': {
+        log_level_ = std::string(optarg);
+        break;
+      }
+      case 's': {
+        master_.resize(strlen(optarg));
+        sscanf(optarg, "%s:%d", master_.c_str(), master_port_);
+        break;
+      }
+      case '?': {
+        std::cerr << "Unknow option " << std::endl;
+        return false;
+        break;
       }
     }
   }
-  return true;
+}
+return true;
 }
 
 void PikiwiDB::OnNewConnection(uint64_t connId, std::shared_ptr<pikiwidb::PClient>& client,
