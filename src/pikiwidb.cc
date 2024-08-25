@@ -276,7 +276,7 @@ static int InitLimit() {
 
 static void daemonize() {
   if (fork()) {
-    // parent exits
+  // parent exits
     exit(0); 
   }
   // create a new session
