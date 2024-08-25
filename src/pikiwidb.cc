@@ -60,7 +60,7 @@ static void Usage() {
   std::cerr << "pikiwidb is the PikiwiDB server.\n";
   std::cerr << "\n";
   std::cerr << "Usage:\n";
-  std::cerr << "  pikiwidb [options]\n";
+  std::cerr << "  pikiwidb [/path/to/pikiwidb.conf] [options]\n";
   std::cerr << "\n";
   std::cerr << "Options:\n";
   std::cerr << "  -v, --version                  output version information, then exit\n";
@@ -69,8 +69,8 @@ static void Usage() {
   std::cerr << "  -l LEVEL, --loglevel LEVEL     Set the log level\n";
   std::cerr << "  -s ADDRESS, --slaveof ADDRESS  Set the slave address\n";
   std::cerr << "Examples:\n";
-  std::cerr << "  pikiwidb --config /etc/redis/6379.conf\n";
-  std::cerr << "  pikiwidb --config /etc/myredis.conf --loglevel verbose\n";
+  std::cerr << "  pikiwidb /path/pikiwidb.conf\n";
+  std::cerr << "  pikiwidb /path/pikiwidb.conf --loglevel verbose\n";
   std::cerr << "  pikiwidb --port 7777\n";
   std::cerr << "  pikiwidb --port 7777 --slaveof 127.0.0.1:8888\n";
 }
@@ -78,26 +78,26 @@ static void Usage() {
 // Handle the argc & argv
 bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
   static struct option long_options[] = {
-      {"config", required_argument, 0, 'c'},   {"version", no_argument, 0, 'v'},
-      {"help", no_argument, 0, 'h'},           {"port", required_argument, 0, 'p'},
-      {"loglevel", required_argument, 0, 'l'}, {"slaveof", required_argument, 0, 's'},
+      {"version", no_argument, 0, 'v'},       {"help", no_argument, 0, 'h'},
+      {"port", required_argument, 0, 'p'},    {"loglevel", required_argument, 0, 'l'},
+      {"slaveof", required_argument, 0, 's'},
   };
+  // pikiwidb [/path/to/pikiwidb.conf] [options]
+  if (cfg_file_.empty() && ::access(argv[1], R_OK) == 0) {
+    cfg_file_ = argv[1];
+    argc = argc - 1;
+    argv = argv + 1;
+  }
   while (1) {
     int this_option_optind = optind ? optind : 1;
     int option_index = 0;
     int c;
-    c = getopt_long(argc, argv, "c:vhp:l:s:", long_options, &option_index);
+    c = getopt_long(argc, argv, "vhp:l:s:", long_options, &option_index);
     if (c == -1) {
       break;
     }
 
     switch (c) {
-      case 'c': {
-        if (cfg_file_.empty() && ::access(optarg, R_OK) == 0) {
-          cfg_file_ = optarg;
-        }
-        break;
-      }
       case 'v': {
         std::cerr << "PikiwiDB Server version: " << KPIKIWIDB_VERSION << " bits=" << (sizeof(void*) == 8 ? 64 : 32)
                   << std::endl;
