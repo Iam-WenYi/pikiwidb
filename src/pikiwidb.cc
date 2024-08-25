@@ -83,7 +83,7 @@ bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
       {"slaveof", required_argument, 0, 's'},
   };
   // pikiwidb [/path/to/pikiwidb.conf] [options]
-  if (cfg_file_.empty() && ::access(argv[1], R_OK) == 0) {
+  if (cfg_file_.empty() && argc > 1 && ::access(argv[1], R_OK) == 0) {
     cfg_file_ = argv[1];
     argc = argc - 1;
     argv = argv + 1;
