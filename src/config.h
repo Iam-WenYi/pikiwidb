@@ -418,4 +418,3 @@ class PConfig {
   std::string config_file_name_;
 };
 }  // namespace pikiwidb
-

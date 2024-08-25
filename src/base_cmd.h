@@ -4,8 +4,7 @@
 // of patent rights can be found in the PATENTS file in the same directory
 
 /*
-  Defined the open commands of PikiwiDB to the outside, the setting of permissions, 
-  and other aspects.
+  Defined the open commands of PikiwiDB to the outside, the setting of permissions, and other aspects.
  */
 
 #pragma once
