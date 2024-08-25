@@ -118,7 +118,8 @@ using ValuePrt = std::unique_ptr<BaseValue>;
 using ConfigMap = std::unordered_map<std::string, ValuePrt>;
 
 /*
- * PConfig holds information about PikiwiDB server-side runtime information.
+ * PConfig holds information about PikiwiDB
+ * server-side runtime information.
  */
 class PConfig {
  public:
@@ -191,10 +192,10 @@ class PConfig {
   AtomicString master_ip;
   std::atomic_uint32_t master_port;
 
-  /* aliases store the rename command */
+  // aliases store the rename command
   std::map<std::string, std::string> aliases;
 
-  /* The max connection limition  */
+  // The max connection limition
   std::atomic_uint32_t max_clients = 10000;
 
   /*
@@ -227,7 +228,7 @@ class PConfig {
   std::atomic_int32_t fast_cmd_threads_num = 4;
   std::atomic_int32_t slow_cmd_threads_num = 4;
 
-  /* Limit the maximum number of bytes returned to the client. */
+  // Limit the maximum number of bytes returned to the client.
   std::atomic_uint64_t max_client_response_size = 1073741824;
 
   /*
@@ -238,10 +239,10 @@ class PConfig {
   std::atomic_uint64_t small_compaction_threshold = 604800;
   std::atomic_uint64_t small_compaction_duration_threshold = 259200;
 
-  /* Decide whether PikiwiDB runs as a daemon process. */
+  // Decide whether PikiwiDB runs as a daemon process.
   std::atomic_bool daemonize = false;
 
-  /* Which file to store the process id when running? */
+  // Which file to store the process id when running?
   AtomicString pid_file = "./pikiwidb.pid";
 
   /*
@@ -260,10 +261,10 @@ class PConfig {
    */
   std::atomic_uint16_t raft_port_offset = 10;
 
-  /* The path to store the data */
+  // The path to store the data
   AtomicString db_path = "./db/";
 
-  /* The log directory, default print to stdout */
+  // The log directory, default print to stdout
   AtomicString log_dir = "stdout";
 
   /*
@@ -279,7 +280,7 @@ class PConfig {
    */
   AtomicString run_id;
 
-  /* The number of databases. */
+  // The number of databases.
   std::atomic<size_t> databases = 16;
 
   /*
@@ -289,10 +290,10 @@ class PConfig {
   std::atomic_uint32_t worker_threads_num = 2;
   std::atomic_uint32_t slave_threads_num = 2;
 
-  /* How many RocksDB Instances will be opened?  */
+  // How many RocksDB Instances will be opened?
   std::atomic<size_t> db_instance_num = 3;
 
-  /* Use raft protocol?  */
+  // Use raft protocol?
   std::atomic_bool use_raft = true;
 
   /*
@@ -304,16 +305,16 @@ class PConfig {
 
   std::atomic_uint32_t rocksdb_max_subcompactions = 0;
 
-  /* default 2 */
+  // default 2
   std::atomic_int rocksdb_max_background_jobs = 4;
 
-  /* default 2 */
+  // default 2
   std::atomic<size_t> rocksdb_max_write_buffer_number = 2;
 
-  /* default 2 */
+  // default 2
   std::atomic_int rocksdb_min_write_buffer_number_to_merge = 2;
 
-  /* default 64M */
+  // default 64M
   std::atomic<size_t> rocksdb_write_buffer_size = 64 << 20;
 
   std::atomic_int rocksdb_level0_file_num_compaction_trigger = 4;
@@ -322,10 +323,10 @@ class PConfig {
   std::atomic_int rocksdb_level0_slowdown_writes_trigger = 20;
   std::atomic_int rocksdb_level0_stop_writes_trigger = 36;
 
-  /* 86400 * 7 = 604800 */
+  // 86400 * 7 = 604800
   std::atomic_uint64_t rocksdb_ttl_second = 604800;
 
-  /* 86400 * 3 = 259200 */
+  // 86400 * 3 = 259200
   std::atomic_uint64_t rocksdb_periodic_second = 259200;
 
   rocksdb::Options GetRocksDBOptions();
@@ -333,7 +334,7 @@ class PConfig {
   rocksdb::BlockBasedTableOptions GetRocksDBBlockBasedTableOptions();
 
  private:
-  /* Some functions and variables set up for internal work. */
+  // Some functions and variables set up for internal work.
 
   /*------------------------
    * AddString (const std::string& key, bool rewritable, * std::vector<AtomicString*> values_ptr_vector)
@@ -407,14 +408,14 @@ class PConfig {
   }
 
  private:
-  /* The parser to parse the config data */
+  // The parser to parse the config data
   ConfigParser parser_;
 
-  /* Store the key-value data for config */
+  // Store the key-value data for config
   ConfigMap config_map_;
 
-  /* The file name of the config */
+  // The file name of the config
   std::string config_file_name_;
 };
 }  // namespace pikiwidb
-/* namespace pikiwidb */
+

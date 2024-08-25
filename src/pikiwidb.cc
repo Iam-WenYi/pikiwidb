@@ -32,7 +32,7 @@
 #include "slow_log.h"
 #include "store.h"
 
-/* g_pikiwidb is a global abstraction of the server-side process */
+// g_pikiwidb is a global abstraction of the server-side process
 std::unique_ptr<PikiwiDB> g_pikiwidb;
 
 using namespace pikiwidb;
@@ -75,7 +75,7 @@ static void Usage() {
   std::cerr << "  pikiwidb --port 7777 --slaveof 127.0.0.1:8888\n";
 }
 
-/* Handle the argc & argv */
+// Handle the argc & argv
 bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
   static struct option long_options[] = {
       {"config", required_argument, 0, 'c'},   {"version", no_argument, 0, 'v'},
@@ -276,9 +276,11 @@ static int InitLimit() {
 
 static void daemonize() {
   if (fork()) {
-    exit(0); /* parent exits */
+    // parent exits
+    exit(0); 
   }
-  setsid(); /* create a new session */
+  // create a new session
+  setsid(); 
 }
 
 static void closeStd() {
@@ -292,9 +294,7 @@ static void closeStd() {
   }
 }
 
-/*
- * Any PikiwiDB server process begins execution here.
- */
+// Any PikiwiDB server process begins execution here.
 int main(int argc, char* argv[]) {
   g_pikiwidb = std::make_unique<PikiwiDB>();
   if (!g_pikiwidb->ParseArgs(argc, argv)) {
@@ -331,7 +331,7 @@ int main(int argc, char* argv[]) {
     g_pikiwidb->Run();
   }
 
-  /* When PikiwiDB exit, flush log */
+  // When PikiwiDB exit, flush log
   spdlog::get(logger::Logger::Instance().Name())->flush();
   return 0;
 }

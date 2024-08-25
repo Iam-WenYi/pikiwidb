@@ -4,7 +4,7 @@
 // of patent rights can be found in the PATENTS file in the same directory
 
 /*
-  Built the foundational classes for the design and expansion  of commands.
+  Built the foundational classes for the design and expansion of commands.
 */
 
 #include "base_cmd.h"
