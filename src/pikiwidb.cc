@@ -127,7 +127,7 @@ bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
       }
       case 's': {
         master_.resize(strlen(optarg));
-        sscanf(optarg, "%s:%d", master_.c_str(), master_port_);
+        sscanf(optarg, "%s:%d", master_, master_port_);
         break;
       }
       case '?': {
@@ -137,8 +137,7 @@ bool PikiwiDB::ParseArgs(int argc, char* argv[]) {
       }
     }
   }
-}
-return true;
+  return true;
 }
 
 void PikiwiDB::OnNewConnection(uint64_t connId, std::shared_ptr<pikiwidb::PClient>& client,
