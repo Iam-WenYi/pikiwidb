@@ -19,7 +19,11 @@
 
 #include "base_cmd.h"
 #include "config.h"
+#include "env.h"
 #include "pikiwidb.h"
+#include "pstd_string.h"
+#include "slow_log.h"
+#include "store.h"
 
 namespace pikiwidb {
 
@@ -355,7 +359,8 @@ int PClient::handlePacket(const char* start, int bytes) {
   //  executeCommand();
   //    return static_cast<int>(ptr - start);
   //  }
-
+  auto now = std::chrono::steady_clock::now();
+  time_stat_->SetEnqueueTs(now);
   g_pikiwidb->SubmitFast(std::make_shared<CmdThreadPoolTask>(shared_from_this()));
 
   // check transaction
@@ -426,6 +431,7 @@ PClient* PClient::Current() { return s_current; }
 PClient::PClient() : parser_(params_) {
   auth_ = false;
   reset();
+  time_stat_.reset(new TimeStat());
 }
 
 void PClient::OnConnect() {
@@ -619,9 +625,9 @@ void PClient::TransferToSlaveThreads() {
   //  }
 }
 
-void PClient::AddCurrentToMonitor() {
+void PClient::AddToMonitor() {
   std::unique_lock<std::mutex> guard(monitors_mutex);
-  monitors.insert(std::static_pointer_cast<PClient>(s_current->shared_from_this()));
+  monitors.insert(weak_from_this());
 }
 
 void PClient::FeedMonitors(const std::vector<std::string>& params) {
@@ -666,5 +672,9 @@ void PClient::FeedMonitors(const std::vector<std::string>& params) {
 void PClient::SetKey(std::vector<std::string>& names) {
   keys_ = std::move(names);  // use std::move clear copy expense
 }
+
+std::unordered_map<std::string, CommandStatistics>* PClient::GetCommandStatMap() { return &cmdstat_map_; }
+
+std::shared_ptr<TimeStat> PClient::GetTimeStat() { return time_stat_; }
 
 }  // namespace pikiwidb
